@@ -14,7 +14,7 @@ function setUpDrawingPad(columns, rows) {
         gridBox.id = i;
         drawPad.appendChild(gridBox).className = "grid-box";
     }
-    
+
     function colorTheGrid(e) {
         e.target.classList.add('color-box');
     }
@@ -41,9 +41,14 @@ function start() {
 
         })
         
-        let cols = prompt('Enter new grid: ');
-        let rows = cols;
+        let cols = prompt('Enter a number between 16-100: ');
 
+        while (cols > 100 || cols < 16) {
+            cols = prompt('Enter a number bewteen 16-100: ');
+
+        }
+
+        let rows = cols;
         setUpDrawingPad(cols, rows);
     }
 
