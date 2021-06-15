@@ -9,8 +9,8 @@
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     margin-left: auto;
     margin-right: auto;
-    height: 600px;
-    width: 600px;
+    max-height: 600px;
+    max-width: 600px;
 }
 
 h1 {
@@ -25,4 +25,11 @@ h1 {
 
 .color-box {
     background-color: lightcoral;
+}
+
+#clear-btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
 }
