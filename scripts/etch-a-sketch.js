@@ -16,7 +16,11 @@ function setUpDrawingPad(columns, rows) {
     }
 
     function colorTheGrid(e) {
-        e.target.classList.add('color-box');
+        
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        if (e.target.style['backgroundColor'] === "") {
+            e.target.style['backgroundColor'] = "#" + randomColor;
+        }
     }
 
     let individualGridBox = document.querySelectorAll('.grid-box');
@@ -29,7 +33,6 @@ function setUpDrawingPad(columns, rows) {
 function start() {
     
     setUpDrawingPad(16, 16);
-
 
     function clearTheGrid() {
 
@@ -54,7 +57,6 @@ function start() {
 
     const clearButton = document.querySelector("#clear-btn");
     clearButton.addEventListener('click', clearTheGrid);
-
 }
 
 start();
